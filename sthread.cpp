@@ -42,7 +42,7 @@ void SThread::setDbManager(DbManager *db){
     connect(this->db, &DbManager::sendData, this, &SThread::receiveFromDbManager);
 }
 
-void SThread::run() Q_DECL_OVERRIDE{
+void SThread::run() {// Q_DECL_OVERRIDE{
     const double percent_chance_for_cookies_reset = 1.0;
     mtx.lock();
     if(this->isTryTerminate){
